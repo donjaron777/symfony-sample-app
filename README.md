@@ -39,7 +39,8 @@ Then, in Controller application makes an HttpClient request ( wrapped as a servi
 
 >> The application should be resilient to large amounts of traffic at very specific hours of the day. This should be taken into account when writing the configuration files.
 
-Due to that reason the users' list is stored in initially available (no need to add anything to config here) FileSystem cache. (Symfony's cache is resilient to cache stampede since v.4)
+Due to that reason the users' list is stored in initially available (no need to add anything to config here) FileSystem cache. (Symfony's cache is resilient to cache stampede since v.4).
+
 The cache is updated once in 5 seconds on demand.
 
 Assuming the application is run behind a load-balancer, trusted proxies are added as network submasks for any private network address
