@@ -11,7 +11,7 @@ By rules declared in
 
 ### routes.yaml:
 
-The first protects the API endpoint /api/users (The link button to the address is added to the app menu in order to show it throws 401 Error without token present in headers)
+The first protects the API endpoint /api/users (The link button to the address is added to the app menu in order to show it throws 401 Error without a valid token present in headers)
 
 The second stands for user session authentication.
 
