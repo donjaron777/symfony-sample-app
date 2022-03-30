@@ -1,0 +1,29 @@
+{% extends('base.html.twig') %}
+
+{% block body %}
+	<h2>List of all users</h2>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<td>
+					ID
+				</td>
+				<td>
+					Username
+				</td>
+			</tr>
+		</thead>
+		<tbody>
+			{% for user in users %}
+				<tr>
+					<td>
+						{{ user.id }}
+					</td>
+					<td>
+						{{ user.username}}
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

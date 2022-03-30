@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register
+{% endblock %}
+
+{% block body %}
+	{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+		<h1>You are already registered!</h1>
+	{% endif %}
+
+	{% if is_granted('IS_AUTHENTICATED_FULLY') == false %}
+		<div class="d-flex p-4 justify-content-center">
+			<dv>
+				<h1>Register</h1>
+			</div>
+			<div class="d-flex justify-content-center">
+				{{ form_start(registrationForm) }}
+				{{ form_row(registrationForm.username) }}
+				{{ form_row(registrationForm.plainPassword, {
+				label: 'Password'
+			}) }}
+				{{ form_row(registrationForm.agreeTerms) }}
+
+				<button type="submit" class="btn btn-primary">Register</button>
+				{{ form_end(registrationForm) }}
+			</div>
+		</div>
+
+	{% endif %}
+
+{% endblock %}
