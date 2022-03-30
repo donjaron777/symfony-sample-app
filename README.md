@@ -29,9 +29,12 @@ The second stands for user session authentication.
 ```
 
 Initially, after passing custom user authentication, application triggers user-defined UserAuthenticatedEvent, which is then sent for processing to the UserSubscriber event subscrber where the api token is assigned to the user.
+
 After that the user is routed to the home route: "/" run by MainController.
 
-Then, in Controller application makes an HttpClient request ( wrapped as a service) with an issued api token.
+Then, in Controller application makes an HttpClient request ( wrapped as a service) with an issued api token. 
+
+(It was asked in the task to perform a request to the API, it could be done via client-side request, but in that case the api token could become visible for the user, so the server side request was chosen for implementation)
 
 >> The application should be resilient to large amounts of traffic at very specific hours of the day. This should be taken into account when writing the configuration files.
 
