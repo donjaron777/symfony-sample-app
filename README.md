@@ -11,7 +11,7 @@ By rules declared in
 
 ### routes.yaml:
 
-The first protects the API endpoint /api/users
+The first protects the API endpoint /api/users (The link button to the address is added to the app menu in order to show it throws 401 Error without token present in headers)
 The second stands for user session authentication.
 
 
@@ -41,7 +41,7 @@ Then, in Controller application makes an HttpClient request ( wrapped as a servi
 Due to that reason users list are stored in initially available (no need to add anything to config here) FileSystem cache. (Symfony's cache is resilient to cache stampede since v.4)
 The cache is updated once in 5 seconds on demand.
 
-Also, assuming the application is run behind a load-balancer, trusted proxies are added as network submasks for any private network address
+Assuming the application is run behind a load-balancer, trusted proxies are added as network submasks for any private network address
 
 ### packages/framework.yaml 
 
@@ -53,6 +53,7 @@ framework:
     trusted_headers: ['forwarded']
 ```
  
+
 
 
 
