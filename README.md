@@ -2,7 +2,7 @@
 
 Here lies the source code for the test task, the very full copy of the test task is not placed here due to security reasons.
 
-## By now the running application can be accessed on http://95.211.120.226:2020/
+By now the running application can be accessed on http://95.211.120.226:2020/
 
 The application contains two authenticators: ApiTokenAuthenticator.php and  AppCustomAuthenticator.php
 
